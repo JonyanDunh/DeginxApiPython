@@ -1,11 +1,12 @@
 import datetime
 from Main.Action import encrypt
+import uuid
 
 
-
-def default_user_model(user):
+def default_creat_user_model(user):
     # notice new fields have been added to the sales order
-    user_information = {'id' : encrypt.md5_hash(user["email"]),
+    user_information = {'id' : str(uuid.uuid4()),
+            'username':user["username"],
             'email' : user["email"],
             'password' : encrypt.md5_hash(user["password"])
             }
