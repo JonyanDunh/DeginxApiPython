@@ -13,7 +13,7 @@ Results={
 500: 'Server Error',
 404: 'Not Found' ,
 400:'Error',
-419:'Make sure that the form is complete'
+419:'Verify that the form data is accurate'
  }
 
 
