@@ -7,7 +7,6 @@ import sys
 
 
 from App.Utils.CosmosDB import action as CosmosDB
-from App.Action import encrypt
 from App.Http.Forms import Login
 @csrf_exempt
 def login(request):
