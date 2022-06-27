@@ -3,7 +3,7 @@ import azure.cosmos.exceptions as exceptions
 from azure.cosmos.partition_key import PartitionKey
 import datetime
 import os
-from Main.CosmosDB.model import default_creat_user_model
+from Main.Utils.CosmosDB.model import default_creat_user_model
 from Main.Action import encrypt
 import json
 settings = {

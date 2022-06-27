@@ -6,7 +6,7 @@ from django.views.decorators.csrf import csrf_exempt
 
 import sys
 sys.path.append("..")
-from Main.CosmosDB import action as CosmosDB
+from Main.Utils.CosmosDB import action as CosmosDB
 from Main.Action import encrypt
 @csrf_exempt
 def register(request):

@@ -20,7 +20,7 @@ handler404 = 'Main.App.views.handler404'
 handler500 = 'Main.App.views.handler500'
 
 urlpatterns = [
-    path('index/', include('index.urls')),
-    path('login/', include('login.urls')),
-    path('register/', include('register.urls')),
+    path('index/', include('Routes.index.urls')),
+    path('login/', include('Routes.login.urls')),
+    path('register/', include('Routes.register.urls')),
 ]

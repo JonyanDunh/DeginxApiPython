@@ -7,8 +7,6 @@ from django.middleware.common import MiddlewareMixin
 from django.core.serializers.json import DjangoJSONEncoder
 
 
-logger = logging.getLogger('django')
-
 
 Results={
 200: 'Success', 
@@ -19,12 +17,7 @@ Results={
  }
 
 
-class ExceptionMiddleware(MiddlewareMixin):
-    """统一异常处理中间件"""
- 
-
-    def process_exception(self, request, exception):
-        return HttpResponse(exception,status=500)
+class Middleware(MiddlewareMixin):
 
     def process_response(self, request, response):
         if isinstance(response, JsonResponse):
