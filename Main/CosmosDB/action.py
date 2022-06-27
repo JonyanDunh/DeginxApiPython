@@ -37,15 +37,15 @@ def get_user_uuid(user):
     return user_json["id"]
 
 def get_user(user):
-    
     # Note that Reads require a partition key to be spcified.
     response = container.read_item(item=get_user_uuid(user), partition_key=user["username"])
     user_information={'id' : response["id"],
             'username':response["username"],
             'email' : response["email"]
             }
-            
-    return  json.dumps(user_information, indent=True)
+    return user_information
+    #return  json.dumps(user_information, indent=True)
+    
 
 
 def get_all_user():
