@@ -11,8 +11,7 @@ from App.Http.Forms import Login
 @csrf_exempt
 def login(request):
     if request.method == "GET":
-        form = Login.Form()
-        return render(request, "add_emp.html", {"form": form})
+        return HttpResponse("This page only supports POST mode",status=403)
     else:
         form = Login.Form(request.POST)
         if form.is_valid():
