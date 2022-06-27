@@ -6,9 +6,9 @@ from django.views.decorators.csrf import csrf_exempt
 import sys
 
 
-from Main.Utils.CosmosDB import action as CosmosDB
-from Main.Action import encrypt
-from Main.Http.Forms import Login
+from App.Utils.CosmosDB import action as CosmosDB
+from App.Action import encrypt
+from App.Http.Forms import Login
 @csrf_exempt
 def login(request):
     if request.method == "GET":

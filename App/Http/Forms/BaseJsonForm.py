@@ -1,5 +1,5 @@
 from django import forms
-from Main.App.settings import DEBUG
+from App.Core.settings import DEBUG
  
  
 class BaseJsonForm(forms.Form):

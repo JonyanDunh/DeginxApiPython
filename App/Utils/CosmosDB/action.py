@@ -3,8 +3,8 @@ import azure.cosmos.exceptions as exceptions
 from azure.cosmos.partition_key import PartitionKey
 import datetime
 import os
-from Main.Utils.CosmosDB.model import default_creat_user_model
-from Main.Action import encrypt
+from App.Utils.CosmosDB.model import default_creat_user_model
+from App.Action import encrypt
 import json
 settings = {
     'host': os.environ.get('ACCOUNT_HOST', 'https://deginx-cosmosdb.documents.azure.com:443/'),
