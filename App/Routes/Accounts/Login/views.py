@@ -20,6 +20,7 @@ def login(request):
             user = authenticate(request,username=data.get("username"), password=data.get("password"))
             if user is not None:
                 django_login(request, user)
+                print(user.__dict__)
                 user_json =UserModelToJson.GetJson(user)
                 return JsonResponse(user_json,safe=False)
             else:
