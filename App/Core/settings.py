@@ -11,7 +11,9 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 
 from pathlib import Path
-
+from configparser import RawConfigParser
+config = RawConfigParser()
+config.read('./settings.config')
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -20,8 +22,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-j%#81cg64-^9eyn_v26vd#%19o11xi0cql%ubzwgfk^e=&xd)^'
-
+#SECRET_KEY = 'django-insecure-j%#81cg64-^9eyn_v26vd#%19o11xi0cql%ubzwgfk^e=&xd)^'
+SECRET_KEY =config.get('django','SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
@@ -80,9 +82,9 @@ WSGI_APPLICATION = 'Core.wsgi.application'
 DATABASES = {
         'default': {
             'ENGINE': 'djongo',
-            'NAME': 'DeginxApi',
+            'NAME': config.get('mongodb','DATABASE_NAME'),
             'CLIENT': {
-                'host': 'mongodb://deginx-mongodb:O1jaN1HJz6R4yhIsc49GwrgJ5i3OunSZ5Lqn89Qb0044CZHDEtNajCaLmaiy3525uxIxaQnS0ioc3CjfpFnLYg==@deginx-mongodb.mongo.cosmos.azure.com:10255/?ssl=true&replicaSet=globaldb&retrywrites=false&maxIdleTimeMS=120000&appName=@deginx-mongodb@'
+                'host': config.get('mongodb','DATABASE_HOST')
             }  
         }
 }
