@@ -37,6 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'Account'
+
 ]
 
 MIDDLEWARE = [
@@ -78,9 +80,9 @@ WSGI_APPLICATION = 'Core.wsgi.application'
 DATABASES = {
         'default': {
             'ENGINE': 'djongo',
-            'NAME': 'User',
+            'NAME': 'DeginxApi',
             'CLIENT': {
-                'host': 'mongodb://deginx-cosmosdb-mongodb:t3Ay9lIFARIboxBMVplqcyWrvCobUu8zzCx8fFu4zQWzss6WGpk79DiY2ZlMPHdpZZqXA2QnkXuXR2pyNUP5zQ==@deginx-cosmosdb-mongodb.mongo.cosmos.azure.com:10255/?ssl=true&retrywrites=false&replicaSet=globaldb&maxIdleTimeMS=120000&appName=@deginx-cosmosdb-mongodb@'
+                'host': 'mongodb://deginx-mongodb:O1jaN1HJz6R4yhIsc49GwrgJ5i3OunSZ5Lqn89Qb0044CZHDEtNajCaLmaiy3525uxIxaQnS0ioc3CjfpFnLYg==@deginx-mongodb.mongo.cosmos.azure.com:10255/?ssl=true&replicaSet=globaldb&retrywrites=false&maxIdleTimeMS=120000&appName=@deginx-mongodb@'
             }  
         }
 }
@@ -126,4 +128,4 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-
+AUTH_USER_MODEL = 'Account.UserModel'

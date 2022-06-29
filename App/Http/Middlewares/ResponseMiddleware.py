@@ -14,7 +14,10 @@ Results={
 404: 'Not Found' ,
 400:'Error',
 403:'Forbidden',
-419:'Verify that the form data is accurate'
+419:'Verify that the form data is accurate',
+452:'The user already exists',
+453:'Failed to create user, please try again',
+454:'The user does not exist or has an incorrect password'
  }
 
 

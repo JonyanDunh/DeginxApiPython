@@ -1,0 +1,4 @@
+python3 Run.py makemigrations --empty Account
+python3 Run.py makemigrations
+python3 Run.py migrate Account
+python3 Run.py migrate
