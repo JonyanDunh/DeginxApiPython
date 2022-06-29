@@ -4,7 +4,7 @@ from azure.cosmos.partition_key import PartitionKey
 import datetime
 import os
 from App.Utils.CosmosDB.model import default_creat_user_model
-from App.Actions import encrypt
+from App.Actions.Encrypt import encrypt
 import json
 settings = {
     'host': os.environ.get('ACCOUNT_HOST', 'https://deginx-cosmosdb.documents.azure.com:443/'),

@@ -75,12 +75,15 @@ WSGI_APPLICATION = 'Core.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-# }
+DATABASES = {
+        'default': {
+            'ENGINE': 'djongo',
+            'NAME': 'User',
+            'CLIENT': {
+                'host': 'mongodb://deginx-cosmosdb-mongodb:t3Ay9lIFARIboxBMVplqcyWrvCobUu8zzCx8fFu4zQWzss6WGpk79DiY2ZlMPHdpZZqXA2QnkXuXR2pyNUP5zQ==@deginx-cosmosdb-mongodb.mongo.cosmos.azure.com:10255/?ssl=true&retrywrites=false&replicaSet=globaldb&maxIdleTimeMS=120000&appName=@deginx-cosmosdb-mongodb@'
+            }  
+        }
+}
 
 
 # Password validation

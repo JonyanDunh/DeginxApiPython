@@ -1,5 +1,5 @@
 import datetime
-from App.Actions import encrypt
+from App.Actions.Encrypt import encrypt
 import uuid
 
 

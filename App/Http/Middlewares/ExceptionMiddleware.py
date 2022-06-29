@@ -11,4 +11,5 @@ from django.core.serializers.json import DjangoJSONEncoder
 class Middleware(MiddlewareMixin):
 
     def process_exception(self, request, exception):
+        print(exception)
         return HttpResponse(exception,status=500)
