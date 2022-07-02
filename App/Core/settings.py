@@ -45,6 +45,7 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    "corsheaders.middleware.CorsMiddleware",
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -54,7 +55,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'App.Http.Middlewares.ExceptionMiddleware.Middleware',
     'App.Http.Middlewares.ResponseMiddleware.Middleware',
-    "corsheaders.middleware.CorsMiddleware",
+    
     "django.middleware.common.CommonMiddleware",
 ]
 
@@ -137,4 +138,10 @@ AUTH_USER_MODEL = 'Account.UserModel'
 
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
+    "https://codepen.io"
 ]
+
+CSRF_TRUSTED_ORIGINS = [
+        'http://localhost:3000',
+        "https://codepen.io"
+    ]
